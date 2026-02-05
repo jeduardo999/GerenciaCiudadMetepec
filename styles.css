@@ -71,11 +71,38 @@ body{font-family:Segoe UI,Arial,Helvetica,sans-serif;margin:0;background:linear-
 
 .card h2, .card h3, h1, h2, h3{color:var(--heading)}
 
+/* Sección de características visual */
+.features-section{padding:12px 18px}
+.features-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.features-left{display:flex;align-items:center}
+.feature-cards{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:18px}
+.feature-card{position:relative;border-radius:28px;width:220px;height:180px;padding:20px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 20px 40px rgba(0,0,0,0.08)}
+.feature-card .feature-icon{position:absolute;right:16px;top:16px;font-size:20px;opacity:0.18}
+.feature-card .feature-title{font-weight:900;font-size:28px;letter-spacing:0.5px}
+.feature-card .feature-sub{font-size:0.85rem;opacity:0.95;margin-top:6px;font-weight:700}
+.feature-card.blue{background:#2d9bf0}
+.feature-card.green{background:#8fd43a}
+.feature-card.lime{background:#b7e23b}
+.feature-card.pink{background:#f4a8c8}
+
+.features-right{display:flex;flex-direction:column;gap:18px}
+.overline{color:var(--accent);font-weight:700;letter-spacing:6px;font-size:0.8rem}
+.feature-heading{font-size:2rem;margin:0;font-weight:900}
+.feature-heading .highlight{color:var(--accent);display:block}
+.feature-paragraph{color:#5a6570;line-height:1.6}
+.feature-info-list{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.info-pill{display:flex;gap:12px;align-items:flex-start;background:#fbfdff;border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px rgba(10,30,60,0.04)}
+.pill-icon{width:48px;height:48px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:18px;box-shadow:0 6px 14px rgba(10,30,60,0.04)}
+.pill-title{font-weight:800;color:var(--heading)}
+.pill-sub{color:#65727b;font-size:0.95rem}
+
+
 a, a:link, a:visited{color:var(--accent-2)}
 a:hover{color:var(--accent)}
 
 @media (max-width:900px){
   .intro-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
   .work-grid{grid-template-columns:1fr}
   .servicios{margin:0 auto;align-items:center;padding:0 12px}
   .report-grid{grid-template-columns:repeat(2,1fr);justify-content:center;gap:18px}
