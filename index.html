@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gerencia de la Ciudad</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Gerencia de la Ciudad Metepec</h1>
+      <nav>
+        <button class="nav-btn active" data-section="inicio">Inicio</button>
+        <button class="nav-btn" data-section="nuestro-trabajo">Nuestro trabajo</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="inicio" class="card page-section active">
+      <h2>Inicio</h2>
+      <div class="intro-grid">
+        <div class="info-box">
+          <h2 class="info-title">
+            <span class="title-part-1">GERENCIA</span>
+            <span class="title-part-2">DE LA CIUDAD.</span>
+          </h2>
+          <p class="info-description">Es el área encargada de recibir, gestionar y resolver reportes de los ciudadanos para resolverlos con eficacia, en el menor tiempo posible.</p>
+          <a href="tel:*7311" class="call-cta">
+            <i class="fa-solid fa-phone"></i>
+            <div class="call-text">
+              <span class="call-label">LLAMA GRATIS AL</span>
+              <span class="call-number">*7311</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="visual-box">
+          <div class="phone-mock">
+            <img src="https://placehold.co/300x600?text=Gerencia+Metepec" alt="Vista móvil de la Gerencia">
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicios: movido fuera del visual-box para centrar en la página -->
+      <div class="servicios">
+        <h4>¿Qué puedes reportar?</h4>
+        <div class="report-grid">
+          <button class="service-card active" data-service="alumbrado">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span class="label">Alumbrado</span>
+            <span class="indicator"></span>
+          </button>
+
+          <button class="service-card" data-service="bacheo">
+            <i class="fa-solid fa-road"></i>
+            <span class="label">Bacheo</span>
+            <span class="indicator"></span>
+          </button>
+
+          <button class="service-card" data-service="parques">
+            <i class="fa-solid fa-tree"></i>
+            <span class="label">Parques</span>
+            <span class="indicator"></span>
+          </button>
+
+          <button class="service-card" data-service="recoleccion">
+            <i class="fa-solid fa-trash"></i>
+            <span class="label">Recolección</span>
+            <span class="indicator"></span>
+          </button>
+
+          <button class="service-card" data-service="fugas">
+            <i class="fa-solid fa-droplet"></i>
+            <span class="label">Fugas de agua</span>
+            <span class="indicator"></span>
+          </button>
+
+          <button class="service-card" data-service="seguridad">
+            <i class="fa-solid fa-bell"></i>
+            <span class="label">Seguridad</span>
+            <span class="indicator"></span>
+          </button>
+
+          <button class="service-card" data-service="semaforos">
+            <i class="fa-solid fa-traffic-light"></i>
+            <span class="label">Semáforos</span>
+            <span class="indicator"></span>
+          </button>
+
+          <button class="service-card" data-service="limpieza">
+            <i class="fa-solid fa-broom"></i>
+            <span class="label">Limpieza</span>
+            <span class="indicator"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="nuestro-trabajo" class="card page-section">
+      <div class="section-header">
+        <button class="back-btn" data-section="inicio">← Volver a Inicio</button>
+        <h2>Nuestro trabajo</h2>
+      </div>
+      <div class="work-grid">
+        <div class="stats">
+          <h3>Estadísticas</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-number" id="stat-baches">0</span>
+              <span class="stat-label">Baches atendidos</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" id="stat-fugas">0</span>
+              <span class="stat-label">Fugas reparadas</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" id="stat-luces">0</span>
+              <span class="stat-label">Luminarias reparadas</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" id="stat-basura">0</span>
+              <span class="stat-label">Toneladas recogidas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="notes">
+          <h3>Notas informativas</h3>
+          <ul id="notas-list">
+            <li>Inicia campaña de bacheo en la colonia Centro.</li>
+            <li>Mantenimiento programado de alumbrado público el próximo lunes.</li>
+            <li>Recogida especial de residuos voluminosos este fin de semana.</li>
+          </ul>
+        </div>
+
+        <div class="mapa">
+          <h3>Mapa dinámico</h3>
+          <div id="map" style="height: 380px;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Gerencia de la Ciudad — Metepec</p>
+      <div class="socials">
+        <a class="social-btn facebook" href="https://facebook.com/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+        <a class="social-btn instagram" href="https://instagram.com/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
