@@ -11,9 +11,9 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1>Gerencia de la Ciudad Metepec</h1>
-      <nav>
+    <div class="container" style="display: flex; align-items: center; gap: 2rem; padding-bottom: 0.5rem;">
+      <img src="https://metepec.gob.mx/gerencia_ciudad/img/Gerencia-Metepec.png" alt="Gerencia de la Ciudad Metepec" style="max-width:180px; width:100%; height:auto; display:block; margin:0;">
+      <nav style="flex:1; display:flex; gap:1rem; justify-content:flex-end;">
         <button class="nav-btn active" data-section="inicio">Inicio</button>
         <button class="nav-btn" data-section="nuestro-trabajo">Nuestro trabajo</button>
       </nav>
@@ -41,7 +41,7 @@
 
         <div class="visual-box">
           <div class="phone-mock">
-            <img src="https://placehold.co/300x600?text=Gerencia+Metepec" alt="Vista móvil de la Gerencia">
+            <img src="https://i0.wp.com/adnoticias.mx/wp-content/uploads/2023/05/plataforma-digital-metepec-1.jpeg?resize=449%2C1024&ssl=1" alt="Plataforma Digital Metepec - Gerencia de la Ciudad">
           </div>
         </div>
       </div>
@@ -131,7 +131,7 @@
             </div>
 
             <div class="features-right">
-              <div class="overline">DESCRIPCIÓN DEL ÁREA</div>
+              <div class="overline">¿QUIENES SOMOS?</div>
               <h3 class="feature-heading">UNA GERENCIA <span class="highlight">RESOLUTIVA Y HUMANA.</span></h3>
               <p class="feature-paragraph">Nuestra misión es garantizar que los servicios públicos funcionen para ti. A través del sistema <strong>*7311</strong>, eliminamos la burocracia y conectamos tu necesidad directamente con las cuadrillas operativas en campo.</p>
 
@@ -196,7 +196,45 @@
 
         <div class="mapa">
           <h3>Mapa dinámico</h3>
-          <div id="map" style="height: 380px;"></div>
+          <iframe src="https://jeduardo999.github.io/Mapa/" style="width:100%; height:380px; border:none;" title="Mapa Interactivo"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apartado: Tu ciudad, en tus manos -->
+    <section class="ciudad-manos-section card" style="margin-top: 2rem; padding: 2rem; background: #10182b; color: #fff; border-radius: 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; box-shadow: 0 4px 32px #0001;">
+      <div style="flex:1; min-width: 260px; max-width: 480px;">
+        <h2 style="font-size:2.5rem; font-weight:900; line-height:1.1; margin-bottom:1.5rem;">
+          TU CIUDAD,<br>
+          <span style="color:#2d7be6;">EN TUS MANOS.</span>
+        </h2>
+        <ol style="list-style:none; padding:0; margin:0 0 2rem 0;">
+          <li style="display:flex; align-items:center; margin-bottom:1rem;">
+            <span style="background:#2d7be6; color:#fff; border-radius:50%; width:2.2rem; height:2.2rem; display:inline-flex; align-items:center; justify-content:center; font-weight:bold; margin-right:1rem;">1</span>
+            Busca "Metepec *7311"
+          </li>
+          <li style="display:flex; align-items:center; margin-bottom:1rem;">
+            <span style="background:#2dd6c1; color:#fff; border-radius:50%; width:2.2rem; height:2.2rem; display:inline-flex; align-items:center; justify-content:center; font-weight:bold; margin-right:1rem;">2</span>
+            Instala y Regístrate
+          </li>
+          <li style="display:flex; align-items:center; margin-bottom:2rem;">
+            <span style="background:#a3d63a; color:#fff; border-radius:50%; width:2.2rem; height:2.2rem; display:inline-flex; align-items:center; justify-content:center; font-weight:bold; margin-right:1rem;">3</span>
+            Reporta en Segundos
+          </li>
+        </ol>
+        <div style="display:flex; gap:1rem;">
+          <a href="#" style="background:#fff; color:#10182b; font-weight:700; border-radius:16px; padding:0.8rem 2rem; text-decoration:none; display:flex; align-items:center; gap:0.5rem; font-size:1rem; box-shadow:0 2px 8px #0002;">
+            <i class="fa-solid fa-download"></i> APP STORE
+          </a>
+          <a href="#" style="background:#2d7be6; color:#fff; font-weight:700; border-radius:16px; padding:0.8rem 2rem; text-decoration:none; display:flex; align-items:center; gap:0.5rem; font-size:1rem; box-shadow:0 2px 8px #0002;">
+            <i class="fa-brands fa-google-play"></i> PLAY STORE
+          </a>
+        </div>
+      </div>
+      <div style="flex:1; min-width: 220px; display:flex; justify-content:center; align-items:center;">
+        <div style="background:#fff; border-radius:32px; padding:1.5rem; display:inline-block; position:relative; box-shadow:0 2px 16px #0002;">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://jeduardo999.github.io/Mapa/" alt="QR Metepec *7311" style="width:200px; height:200px; display:block; border-radius:16px;">
+          <span style="position:absolute; right:10px; bottom:10px; width:60px; height:60px; border:8px solid #2d7be6; border-radius:50%; pointer-events:none;"></span>
         </div>
       </div>
     </section>
@@ -206,8 +244,8 @@
     <div class="container footer-inner">
       <p>Gerencia de la Ciudad — Metepec</p>
       <div class="socials">
-        <a class="social-btn facebook" href="https://facebook.com/" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-        <a class="social-btn instagram" href="https://instagram.com/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a class="social-btn facebook" href="https://www.facebook.com/profile.php?id=100078255782830" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+        <a class="social-btn instagram" href="https://www.instagram.com/fernandofloresempresario/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
       </div>
     </div>
   </footer>
